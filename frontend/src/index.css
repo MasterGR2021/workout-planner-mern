@@ -1,0 +1,152 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --dark-primary: #222831;
+  --dark-secondary: #393E46;
+  --blue-primary: #00ADB5;
+  --white: #EEEEEE;
+  --error: #fe6060;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--dark-secondary);
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 8rem;
+}
+
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #222831;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* workouts */
+.workouts-container {
+  /* background-color: magenta; */
+  display: flex;
+}
+.workouts-container .workouts{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.workouts-container .form {
+  padding: 2rem;
+  width: 30rem;
+}
+
+/* Workout Details */
+.workout-details {
+  padding: 1rem;
+  background-color: var(--dark-primary);
+}
+
+.workout-details h4 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--blue-primary);
+}
+
+.workout-details p {
+  margin-bottom: .5rem;
+}
+
+.workout-details p strong {
+  margin-right: .5rem;
+  margin-bottom: 2rem;
+}
+
+.workout-details button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--dark-primary);
+  /* color: #ff0033; */
+  color: var(--error);
+  border: none;
+  margin-top: 1rem;
+}
+
+.workout-details .time {
+  margin-top: 1rem;
+  color: rgb(167, 167, 167);
+  font-size: .8rem;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px dotted var(--blue-primary);
+}
+
+form h2 {
+  margin-bottom: 2rem;
+}
+
+form input {
+  margin-bottom: .5rem;
+  padding: .5rem .5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--dark-primary);
+  /* border: 2px solid var(--blue-primary); */
+  /* background-color: var(--dark-secondary); */
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+form button {
+  padding: .8rem .5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--blue-primary);
+  /* border: none; */
+  outline: none;
+  font-size: 1rem;
+  color: var(--blue-primary);
+  transition: all .3s ease-in-out;
+}
+
+form .error-mssg {
+  color: var(--error);
+  border: 2px solid var(--error);
+  text-align: center;
+  padding: .8rem;
+}
+
+form button:hover {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  border: 2px dotted var(--dark-primary);
+}
+
+.error {
+  border: 2px solid var(--error);
+}
